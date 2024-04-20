@@ -1,0 +1,21 @@
+.navbarList{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    color: #fff;
+   
+}
+.navBar{
+background-color: #24292E;
+}
+.makeFlex{
+    display: flex;
+    gap: 4px;
+}
+.down{
+    margin-top: 2px;
+}
+li{
+    cursor: pointer;
+}

@@ -1,0 +1,1 @@
+export const navbarItems : any[] = [{name:"Product", isExpandable:true},{name:"Solutions", isExpandable:true},{name:"Open source", isExpandable: true},{name:"Pricing", isExpandable:false}]
