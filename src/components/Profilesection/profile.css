@@ -1,6 +1,88 @@
 .profileSection {
   &.root {
-    border: 2px solid white;
-    min-width: 400px;
+  
+    min-width: 350px;
+    padding: 0px 40px;
+  }
+  &.profilePicture{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    margin-top: 20px;
+      border: 1.5px solid rgb(48, 54, 60);
+      margin-left: 20px;
+  }
+  &.makeCenter{
+    display: flex;
+    align-items: center;
+    
+  }
+  &.name{
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 15px;
+  }
+  &.login{
+    color: #848d97; 
+    font-size: 18px;
+    margin-top: 4px;
+    font-weight: 600;
+  }
+  &.follow{
+    color: #c8d1d9;
+      font-size: 14px;
+      font-weight: 600;
+      background-color: #21262c;
+      padding: 4px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      gap: 5px;
+      border: 2px solid rgb(48, 54, 60);
+      position: relative;
+      width: 100%;
+      margin-top: 20px;
+      padding: 8px 0px;
+  }
+  &.bio{
+   color: #fff;
+   margin-top: 15px;
+   font-weight: 600;
+  }
+  &.flex{
+    display: flex;
+    color: white;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+  &.followers , &.following{
+    color: #848d97;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  &.divide{
+    margin-bottom: 5px;
+  }
+  &.org,&.location{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  &.location{
+    margin-top: 10px;
+  }
+  &.gray{
+    color: #848d97;
+  }
+  &.saperate{
+    height: 1px;
+    background-color: rgb(37, 43, 49);
+    margin-top: 15px;
   }
 }
