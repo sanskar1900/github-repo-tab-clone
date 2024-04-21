@@ -1,0 +1,135 @@
+.repoSection{
+&.root {
+  border: 2px solid white;
+  width: 100%;
+  padding: 40px;
+  padding-right: 120px;
+  position: relative;
+}
+&.menu{
+  display: flex;
+  gap: 4px;
+  position: static;
+  top: 0;
+ 
+}
+&.flex{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #848d97;
+  cursor: pointer;
+}
+&.flex:hover{
+  color: #4493f8;
+}
+&.center{
+  text-align: center;
+  color: #fff;
+margin-top: 80px;
+font-weight: 800;
+font-size: 18px;
+}
+&.empty{
+  padding: 20px 0px;
+    width: 95%;
+    border-top: 1px solid rgb(37, 43, 49);
+    margin-left: 10px;
+    border-bottom: 1px solid rgb(37, 43, 49);
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+&.menuItem,&.selectedMenuItem{
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+}
+&.selectedMenuItem{
+font-weight: 600;
+border-bottom: 2px solid #f78166;
+}
+.menuItem:hover {
+  background-color: #21262c;
+  
+}
+.selectedMenuItem:hover{
+  background-color: #21262c;
+}
+}
+.repoDetail{
+  &.root,&.rootFirst,&.rootLast{
+    
+   
+   padding: 20px 0px;
+    width: 95%;
+    border-top: 1px solid rgb(37,43,49);
+    margin-left: 10px;
+
+      
+  }
+  &.rootFirst{
+   margin-top: 5px;
+  }
+  &.rootLast{
+border-bottom: 1px solid rgb(37, 43, 49);
+  }
+  &.name{
+    color: #4493f8;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  &.flex, &.languageColorFlex{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+  
+  }
+  &.public{
+color: #848d97;
+font-size: 12px;
+font-weight: 600;
+border: 0.5px solid rgb(48, 54, 60);
+border-radius: 16px;
+padding: 2px 6px;
+  }
+  &.bottomFlex{
+    margin-top: 14px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: #848d97;
+      font-size: 12px;
+      font-weight: 550;
+  }
+  &.language{
+    color: #848d97;
+    font-size: 12px;
+    font-weight: 550;
+  }
+  &.languageColor
+  {
+    height: 12px;
+    width: 12px;
+    background-color: blue;
+    border-radius: 50%;
+  }
+  &.languageColorFlex{
+     gap: 3px;
+  }
+  &.desc{
+    color: #848d97 ;
+    font-weight: 500;
+    font-size: 12px;
+    max-width: 400px;
+    margin-top: 10px;
+  }
+
+}

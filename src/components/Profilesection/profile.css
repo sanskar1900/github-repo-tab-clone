@@ -1,0 +1,6 @@
+.profileSection {
+  &.root {
+    border: 2px solid white;
+    min-width: 400px;
+  }
+}
