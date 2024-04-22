@@ -60,6 +60,7 @@ export const RepoSection = () => {
           );
         })}
       </div> */}
+      {/* comenting becaue of change of design for the assignment and the url i opned later */}
       <div className="repoSection divider"></div>
       {selectedIndex === 1 ? (
         <>
@@ -77,6 +78,7 @@ export const RepoSection = () => {
                     repoData={repoData}
                     index={index}
                     totalItems={data?.length}
+                    key={repoData?.id}
                   />
                 );
               })

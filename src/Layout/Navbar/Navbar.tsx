@@ -11,7 +11,7 @@ const Navbar = () => {
         <FaGithub size={30} />
         {navbarItems?.map((data: any) => {
           return (
-            <li>
+            <li key={data?.id}>
               {" "}
               <div className="makeFlex">
                 <div>{data?.name}</div>{" "}

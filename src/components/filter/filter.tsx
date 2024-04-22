@@ -31,7 +31,6 @@ const Filter = ({ data, setFilteredData, filter, setFilter }: dataType) => {
           item?.updatedFilter?.type?.toLocaleLowerCase() ||
           updatedFilter?.type === "All")
     );
-    console.log(updatedFilter);
     setFilteredData(filteredData);
   };
   const openDropDown = (dropdownType: string) => {
@@ -41,17 +40,24 @@ const Filter = ({ data, setFilteredData, filter, setFilter }: dataType) => {
     ) {
       setSelectedDropDown({ selectedDropDownName: null, isOpen: false });
     } else {
-      setSelectedDropDown({ selectedDropDownName: dropdownType, isOpen: true });
+      setSelectedDropDown({
+        selectedDropDownName: dropdownType,
+        isOpen: true,
+      });
     }
   };
   const shouldOpenDropDown = (data: string): boolean => {
     return data === selectedDropDown?.selectedDropDownName;
   };
   const renderMenuItem = (data: string) => {
+    const dropDownType =
+      selectedDropDown?.selectedDropDownName?.toLocaleLowerCase();
+
     return (
       <div>
         <div>
-          {filter?.type === data ? (
+          {filter?.[dropDownType]?.toLowerCase() ===
+          data?.toLocaleLowerCase() ? (
             <div className="filter check">✓</div>
           ) : (
             <div className="filter dummy">. </div>
@@ -103,7 +109,11 @@ const Filter = ({ data, setFilteredData, filter, setFilter }: dataType) => {
       <div className="filter dropDownFlex">
         {filterOptions?.map((data: string) => {
           return (
-            <div className="filter flex" onClick={() => openDropDown(data)}>
+            <div
+              key={data}
+              className="filter flex"
+              onClick={() => openDropDown(data)}
+            >
               <div>{data}</div>
               <IoMdArrowDropdown className="filter downArrow" />
               {data !== "Sort" && shouldOpenDropDown(data) && renderDropDown()}
