@@ -23,6 +23,7 @@ export const RepoSection = () => {
     (state: any) => state.repositoryReducer
   );
   const [filteredData, setFilteredData] = useState<any[]>();
+  const { profileData } = useSelector((state: any) => state.profileReducer);
 
   useEffect(() => {
     fetchRepoData(dispatch);
@@ -103,9 +104,7 @@ export const RepoSection = () => {
                     </div>
                   </div>
                   <div className="repoSection center">
-                    {
-                      "supreetsingh247 doesn’t have any repositories that match."
-                    }
+                    {`${profileData?.login} doesn’t have any repositories that match.`}
                   </div>
                 </>
               )}

@@ -3,7 +3,7 @@ import "./filter.css";
 import { filterOptions, languages, types } from "../../constants/data";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
-import { BsCheckLg } from "react-icons/bs";
+import { BsCheckLg, BsDisplay } from "react-icons/bs";
 
 interface dataType {
   data: any[];
@@ -52,12 +52,12 @@ const Filter = ({ data, setFilteredData, filter, setFilter }: dataType) => {
       <div>
         <div>
           {filter?.type === data ? (
-            <BsCheckLg size={14} />
+            <div className="filter check">✓</div>
           ) : (
-            <div className="filter dummy"></div>
+            <div className="filter dummy">. </div>
           )}
         </div>
-        <div>{data}</div>
+        <div>{" " + data}</div>
       </div>
     );
   };

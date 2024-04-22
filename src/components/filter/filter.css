@@ -63,13 +63,17 @@
             gap: 4px;
          
     }
+    &.check{
+        width: 20px;
+    }
     &.saperate{
        font-weight: 800;
         justify-content: space-between;
     }
     &.dummy
     {
-        width: 14px;
+        width: 20px;
+        
     }
         @media screen and (max-width: 758px) {
             &.root {
@@ -93,9 +97,10 @@
                            &.menuItem,
                            &.saperate {
                                min-width: 50px;
-                               padding: 20px;
-            
+                               padding: 10px;
+             
                            }
+                          
         }
                       
 }
