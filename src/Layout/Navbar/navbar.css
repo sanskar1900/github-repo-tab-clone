@@ -22,3 +22,8 @@ z-index: 1;
 li{
     cursor: pointer;
 }
+ @media screen and (max-width : 758px){
+    .makeFlex{
+        display: none;
+    }
+ }

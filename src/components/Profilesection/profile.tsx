@@ -7,6 +7,7 @@ import { GoPeople } from "react-icons/go";
 import { CgOrganisation } from "react-icons/cg";
 
 import { GoLocation } from "react-icons/go";
+import Achievements from "./achievement";
 
 export const ProfileSection = () => {
   const dispatch = useDispatch();
@@ -21,39 +22,43 @@ export const ProfileSection = () => {
   return (
     <div className="profileSection root">
       <div className="profileSection makeCenter">
+        <img
+          className="profileSection profilePicture"
+          src={profileData?.avatar_url}
+          alt="profile"
+        ></img>
         <div>
-          <img
-            className="profileSection profilePicture"
-            src={profileData?.avatar_url}
-            alt="profile"
-          ></img>
           <div className="profileSection name">{profileData?.name}</div>
           <div className="profileSection login">{profileData?.login}</div>
         </div>
       </div>
-      <button className="profileSection follow">{"Follow"}</button>
-      <div className="profileSection bio">{profileData?.bio}</div>
-      <div className="profileSection flex">
-        <GoPeople />
-        <div>
-          {`${profileData?.followers}`}{" "}
-          <span className="profileSection followers">followers</span>
+      <div className="profileSection followdiv">
+        <button className="profileSection follow">{"Follow"}</button>
+
+        <div className="profileSection bio">{profileData?.bio}</div>
+        <div className="profileSection flex">
+          <GoPeople />
+          <div>
+            {`${profileData?.followers}`}{" "}
+            <span className="profileSection followers">followers</span>
+          </div>
+          <div className="profileSection divide">.</div>
+          <div>
+            {`${profileData?.following} `}
+            <span className="profileSection following">following</span>
+          </div>
         </div>
-        <div className="profileSection divide">.</div>
-        <div>
-          {`${profileData?.following} `}
-          <span className="profileSection following">following</span>
-        </div>
+        <span className="profileSection org">
+          <CgOrganisation size={20} className="profileSection gray" />{" "}
+          <span>{profileData?.company}</span>
+        </span>
+        <span className="profileSection location">
+          <GoLocation size={18} className="profileSection gray" />{" "}
+          <span>{profileData?.location}</span>
+        </span>
+        <div className="profileSection saperate"></div>
+        <Achievements />
       </div>
-      <span className="profileSection org">
-        <CgOrganisation size={20} className="profileSection gray" />{" "}
-        <span>{profileData?.company}</span>
-      </span>
-      <span className="profileSection location">
-        <GoLocation size={18} className="profileSection gray" />{" "}
-        <span>{profileData?.location}</span>
-      </span>
-      <div className="profileSection saperate"></div>
     </div>
   );
 };

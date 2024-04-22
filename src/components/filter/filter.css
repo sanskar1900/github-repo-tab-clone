@@ -15,11 +15,16 @@
         border-radius: 6px;
         color: white;
         font-weight: 550;
+        min-width: 200px;
     }
     &.searchBox:focus{
         border-color: #4493f8;
         outline: none;
        
+    }
+    &.dropDownFlex{
+        display: flex;
+        gap: 10px;
     }
     &.flex{
         color: #c8d1d9;
@@ -66,4 +71,31 @@
     {
         width: 14px;
     }
+        @media screen and (max-width: 758px) {
+            &.root {
+                padding: 0px;
+                padding-bottom: 10px;
+                flex-direction: column;
+            }
+                           &.searchBox {
+                               width: 95%;
+            
+                               font-weight: 550;
+                           }
+            
+                           &.dropDown {
+            
+                               top: 35px;
+                               right: -70px;
+            
+                           }
+            
+                           &.menuItem,
+                           &.saperate {
+                               min-width: 50px;
+                               padding: 20px;
+            
+                           }
+        }
+                      
 }

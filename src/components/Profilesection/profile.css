@@ -2,7 +2,8 @@
   &.root {
   
     min-width: 350px;
-    padding: 0px 40px;
+    padding: 0px 20px 0px 80px;
+      background-color: rgb(14, 17, 23);
   }
   &.profilePicture{
     height: 300px;
@@ -14,7 +15,8 @@
   }
   &.makeCenter{
     display: flex;
-    align-items: center;
+   
+    flex-direction: column;
     
   }
   &.name{
@@ -22,6 +24,7 @@
     font-size: 24px;
     font-weight: 800;
     margin-top: 15px;
+    
   }
   &.login{
     color: #848d97; 
@@ -84,5 +87,40 @@
     height: 1px;
     background-color: rgb(37, 43, 49);
     margin-top: 15px;
+  }
+  @media screen and (max-width : 758px) {
+    &.makeCenter {
+       
+        flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      }
+      &.profilePicture{
+        height: 25%;
+        width: 25%;
+      }
+            &.root {
+              width: 100%;
+              padding:0px;
+              min-width: none;
+             
+            }
+            &.org{
+display: none;
+            }
+&.location{
+display: none;
+}    
+&.followdiv{
+  padding: 20px;
+}
+  }
+}
+.achievement{
+  &.heading{
+    font-weight: 700;
+    margin-top: 20px;
+    color: #fff;
+    
   }
 }

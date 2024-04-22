@@ -43,7 +43,7 @@ export const RepoSection = () => {
   };
   return (
     <div className="repoSection root">
-      <div className="repoSection menu">
+      {/* <div className="repoSection menu">
         {menu?.map((data: string, index: number) => {
           return (
             <div
@@ -58,7 +58,8 @@ export const RepoSection = () => {
             </div>
           );
         })}
-      </div>
+      </div> */}
+      <div className="repoSection divider"></div>
       {selectedIndex === 1 ? (
         <>
           <Filter
@@ -67,6 +68,7 @@ export const RepoSection = () => {
             filter={filter}
             setFilter={setFilter}
           />
+
           {!isLoading && filteredData?.length > 0
             ? filteredData?.map((repoData: any, index: number) => {
                 return (

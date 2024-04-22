@@ -100,15 +100,17 @@ const Filter = ({ data, setFilteredData, filter, setFilter }: dataType) => {
         onChange={(event) => handleFilter(event, "searchText")}
         value={filter?.searchText}
       />
-      {filterOptions?.map((data: string) => {
-        return (
-          <div className="filter flex" onClick={() => openDropDown(data)}>
-            <div>{data}</div>
-            <IoMdArrowDropdown className="filter downArrow" />
-            {shouldOpenDropDown(data) && renderDropDown()}
-          </div>
-        );
-      })}
+      <div className="filter dropDownFlex">
+        {filterOptions?.map((data: string) => {
+          return (
+            <div className="filter flex" onClick={() => openDropDown(data)}>
+              <div>{data}</div>
+              <IoMdArrowDropdown className="filter downArrow" />
+              {data !== "Sort" && shouldOpenDropDown(data) && renderDropDown()}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
